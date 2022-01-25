@@ -64,6 +64,20 @@ The main difference in general is that wavelets are localized in both time and f
 2. STFT: STFTs as well as standard Fourier transforms and other tools are frequently used to analyse music. The spectrogram can, for example, show frequency on the horizontal axis, with the lowest frequencies at left, and the highest at the right. The height of each bar (augmented by colour) represents the amplitude of the frequencies within that band. The depth dimension represents time, where each new bar was a separate distinct transform. Audio engineers use this kind of visual to gain information about an audio sample, for example, to lo cate the frequencies of specific noises (especially when used with greater frequency resolution) or to find frequencies which may be more or less resonant in the space where the signal was recorded. This information can be used for equalization or tuning other audio effects.
 
 ### Feature selection
+
+#### Over fitting 
+In this case, when we have a lot of features, (for example more than our size of test), then our net will over fit and for example for each output, our net learns to specify a feature so that our accuracy will be about one hundred percent for our train data but we will not get appropriate answer for our test data. All this makes us to think about using methods such as J fisher score for choosing the features.
+
+
+#### Implementing J score for different methods of classification
+
+For deciding threshold, we move the threshold on J for deciding features, then learn the net and evaluate its accuracy using part of train that we selected randomly for evaluating accuracy of network. I also use plotting the accuracy using the K-fold cross validation method for all of the methods of classification and then I chose how many of the features are important for our problem and method. I used the J score for finding the best number of features, after that I use a kind of cross validation procedure to find the best number of the parameter that gives use the best accuracy. Remember that it is important to check the validity of both types of data separately. The main reason is that there are different number of 1 and 0 in the data set and of the best approaches to solve this problem is using class_weight for your learning approach. In the following table I write the number of the features that is the best choose for each method. It was a time-taking action to find all of these feature vales but I found them and they are available in the following table.
+
+|#person | Logistic regression | SVM–linear-2 | SVM–linear-3 | SVM-poly -2 | forest |
+| :---         |     :---:      |          :---: | :---:         |     :---:      |          ---: |
+| 1  | 29     | 51    | 48   |73    | 110    |
+| 2  | 38    | 43   | 35   |80    | 123    |
+| 3  | 29     | 51    | 48   |73    | 110    |
 ### Accuracy
 ### Predictions
 ### conclusion
