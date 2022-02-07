@@ -78,6 +78,12 @@ For deciding threshold, we move the threshold on J for deciding features, then l
 | 1  | 29     | 51    | 48   |73    | 110    |
 | 2  | 38    | 43   | 35   |80    | 123    |
 | 3  | 29     | 51    | 48   |73    | 110    |
+| 4  | 38    | 43   | 35   |80    | 123    |
+| 5  | 29     | 51    | 48   |73    | 110    |
+| 6  | 38    | 43   | 35   |80    | 123    |
+| 7  | 29     | 51    | 48   |73    | 110    |
+| 8  | 38    | 43   | 35   |80    | 123    |
+| 9  | 29     | 51    | 48   |73    | 110    |
 ### Accuracy
 ### Predictions
 ### conclusion
